@@ -23,4 +23,4 @@ resources:
   bugtracker: https://github.com/hoelzro/devel-trace-syscall/issues
   homepage: https://github.com/hoelzro/devel-trace-syscall
   repository: https://github.com/hoelzro/devel-trace-syscall.git
-version: '0.01'
+version: '0.02'

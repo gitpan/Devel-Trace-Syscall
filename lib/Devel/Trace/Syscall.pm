@@ -11,7 +11,7 @@ use XSLoader;
 my $parent_pid = $$;
 
 BEGIN { # must happen at BEGIN time so that flush_events is available to DB::sub
-    our $VERSION = '0.01'; # VERSION
+    our $VERSION = '0.02'; # VERSION
     XSLoader::load(__PACKAGE__, $Devel::Trace::Syscall::VERSION);
 }
 
@@ -76,7 +76,7 @@ Devel::Trace::Syscall - Print a stack trace whenever a system call is made
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -89,7 +89,7 @@ version 0.01
 
 Have you ever been looking at the C<strace> output for a Perl process, looking at all of the
 calls to C<open> or whatever and wondering "where the heck in my program are those happening"?
-You L<ack|http://beyondgrep.com/> the source code for calls to L<open> in vain, only to find
+You L<ack|http://beyondgrep.com/> the source code for calls to C<open> in vain, only to find
 that it's a stray invocation of C<-T> that you missed.
 
 Does this sound familiar to you?  If so, you may find this module useful.  Once loaded, it
@@ -181,16 +181,13 @@ L<ptrace(2)>
 
 =begin comment
 
-
-
-
-=end comment
-
 =over
 
 =item flush_events
 
 =back
+
+=end comment
 
 =head1 AUTHOR
 
